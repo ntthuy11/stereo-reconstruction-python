@@ -100,7 +100,7 @@ def ConvertLeftAndRightImagesToGray(leftImg, rightImg):
 # ************************************************************************************************
 
 def LoadCalibResult(calibFilename):
-    fs = cv2.FileStorage(source=calibFilename, flags=cv2.FILE_STORAGE_READ)
+    fs = cv2.FileStorage(filename=calibFilename, flags=cv2.FILE_STORAGE_READ)
     intrinsic  = fs.getNode('intrinsic').mat() # ref: https://github.com/opencv/opencv_contrib/issues/834
     distortion = fs.getNode('distortion').mat()
     rotation   = fs.getNode('rotation').mat()
